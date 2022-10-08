@@ -1,0 +1,48 @@
+---
+sidebar_position: 6
+---
+
+# Custom Device
+
+To create a custom device follow the instructions below.
+
+1. Create a new device class which extends the DeviceController class.
+
+```javascript
+
+import { DeviceController } from '@espruino-tools/device-controller
+
+export class MyNewDevice extends DeviceController{
+    constructor(){
+        super()
+    }
+}
+```
+
+2. From here you can use the `UART.write()` method to write directly to the device using the espruino commands.
+
+```javascript
+export class MyNewDevice extends DeviceController {
+  constructor() {
+    super();
+  }
+
+  myNewMethod() {
+    this.UART.write("/* do something in espruino js */");
+  }
+}
+```
+
+3. From here you can import your new class and not have to worry about reimplementing connection, writing or evaluating methods.
+
+```javascript
+import { MyNewDevice } from "./my-new-device-class.js";
+
+let device = new MyNewDevice();
+
+device.connect(function () {
+  console.log("connected");
+});
+
+device.myNewMethod();
+```
