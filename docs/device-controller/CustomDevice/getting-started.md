@@ -1,8 +1,8 @@
 ---
-sidebar_position: 6
+sidebar_position: 1
 ---
 
-# Custom Device
+# Getting Started
 
 To create a custom device follow the instructions below.
 
@@ -19,7 +19,7 @@ export class MyNewDevice extends DeviceController{
 }
 ```
 
-2. From here you can use the `UART.write()` method to write directly to the device using the espruino commands.
+2. From here you can use the `UART.write()` method to write directly to the device using the espruino commands or use the built in methods such as `device.Pin.analogOn('D1',0.5)`.
 
 ```javascript
 export class MyNewDevice extends DeviceController {
@@ -29,6 +29,10 @@ export class MyNewDevice extends DeviceController {
 
   myNewMethod() {
     this.UART.write("/* do something in espruino js */");
+  }
+
+  motorOn(speed) {
+    this.Pin.analogOn("D1", speed);
   }
 }
 ```
@@ -45,4 +49,5 @@ device.connect(function () {
 });
 
 device.myNewMethod();
+device.motorOn();
 ```
