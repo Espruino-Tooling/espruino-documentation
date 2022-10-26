@@ -3,7 +3,7 @@
     "position": 5,
     "link": {
       "type": "generated-index",
-      "description": "Explore all the Device Controller package has to offer."
+      "description": "An NPX Tool used to aid in the development process with Espruino Tools."
     }
   }
   

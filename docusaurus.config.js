@@ -10,7 +10,7 @@ const config = {
   tagline: 'A Collection of tools to improve the development experience using espruino devices.',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'log',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 

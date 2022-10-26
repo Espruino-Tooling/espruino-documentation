@@ -3,7 +3,8 @@
     "position": 3,
     "link": {
       "type": "generated-index",
-      "description": "Explore the methods available for the Puck device."
+      "title":"Puck",
+      "description":"All the Puck has to offer"
     }
   }
   
