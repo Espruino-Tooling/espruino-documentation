@@ -166,7 +166,7 @@ import { Robot } from "./robot";
 let robot = new Robot();
 
 export function changeSpeed(speed) {
-  robot.setSpeed(speed);
+  robot.setSpeed(speed / 100);
 }
 
 export function forward() {
@@ -215,7 +215,7 @@ From here we can start creating buttons with our methods as onclick events.
     type="range"
     min="0"
     max="1"
-    value="1"
+    value="100"
     onchange="myEspruinoApp.changeSpeed(this.value)"
   />
 </body>
@@ -245,8 +245,7 @@ library: "robot";
 
 Lets change our HTML file to use the new library name.
 
-````HTML
-```html
+```HTML
 <body>
   <script src="src/index.js"></script>
   <button onchange="robot.forward()">Forward</button>
@@ -256,16 +255,13 @@ Lets change our HTML file to use the new library name.
   <input
     type="range"
     min="0"
-    max="1"
-    value="1"
+    max="100"
+    value="100"
     onchange="robot.changeSpeed(this.value)"
   />
 </body>
-````
-
 ```
 
 ## We're Done
 
 Congrats on creating your first custom Espruino Tools app, code for this project can be found [here](here)
-```
