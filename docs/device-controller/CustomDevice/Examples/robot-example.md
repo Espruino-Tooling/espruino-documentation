@@ -20,24 +20,14 @@ What does the device do?
 First of all lets run the npx tool to get a basis for starting work.
 
 ```
-npx create-espruino-app my-robot-app
+npx create-espruino-app my-robot-app --clean-install
 ```
 
 This will give us a concrete start to build from and start our robot work on.
 
 Lets clean up the repository quickly as we dont need everything the defauly splashpage has.
 
-first lets remove the `espruino-template.js` file located in the `src` folder. This just contains some default styling and isnt relevant for our project.
-
-Next lets remove the reference to this in the `index.js` file,
-
-this should leave our `index.js` file looking like this:
-
-```javascript
-import "./styles/app.scss";
-```
-
-_we can also remove the `.scss` file if you want, im leaving it here to take advantage of the button styling in it._
+_`--clean-install` is used as we dont want the default template_
 
 ## Lets Start Coding.
 
@@ -50,7 +40,7 @@ within our src folder lets start by creating a new file `robot.js`. This will ac
 lets start coding, in your `robot.js` file lets declare a new class and give it our required methods.
 
 ```javascript
-import { DeviceController } from "@espruino-tools/device-controller";
+import DeviceController from "@espruino-tools/device-controller";
 
 export class Robot extends DeviceController {
   constructor() {
@@ -60,7 +50,7 @@ export class Robot extends DeviceController {
   forward() {
     // empty for now
   }
-  backwards() {
+  backward() {
     // empty for now
   }
   left() {
@@ -75,7 +65,7 @@ export class Robot extends DeviceController {
 next we should implement the speed variable.
 
 ```javascript
-import { DeviceController } from "@espruino-tools/device-controller";
+import DeviceController from "@espruino-tools/device-controller";
 
 export class Robot extends DeviceController {
   constructor() {
@@ -90,7 +80,7 @@ export class Robot extends DeviceController {
   forward() {
     // empty for now
   }
-  backwards() {
+  backward() {
     // empty for now
   }
   left() {
@@ -105,7 +95,7 @@ export class Robot extends DeviceController {
 From here we can start using the built in `DeviceController` methods to get some work done, lets implement the `DeviceController`'s `Pin` method to allow for some pin control.
 
 ```javascript
-import { DeviceController } from "@espruino-tools/device-controller";
+import DeviceController from "@espruino-tools/device-controller";
 
 export class Robot extends DeviceController {
   constructor() {
@@ -122,7 +112,7 @@ export class Robot extends DeviceController {
     this.Pin.analogOn("D1", this.speed);
     this.Pin.analogOn("D2", this.speed);
   }
-  backwards() {
+  backward() {
     this.Pin.digitalOn("D3", 0);
     this.Pin.analogOn("D1", this.speed);
     this.Pin.analogOn("D2", this.speed);
@@ -166,14 +156,12 @@ Lets start by importing this class into the `index.js` file located in the `src`
 
 ```javascript
 import { Robot } from "./robot";
-import "app.scss";
 ```
 
 From here we can start to write our methods to be called in the `html` file.
 
 ```javascript
 import { Robot } from "./robot";
-import "app.scss";
 
 let robot = new Robot();
 
@@ -252,11 +240,32 @@ library: "myEspruinoApp";
 to
 
 ```javascript
-library: "myCustomAppName";
+library: "robot";
 ```
 
-_changing this will mean you will also need to change your html by changing any reference to `myEspruinoApp` to `myCustomAppName`_
+Lets change our HTML file to use the new library name.
+
+````HTML
+```html
+<body>
+  <script src="src/index.js"></script>
+  <button onchange="robot.forward()">Forward</button>
+  <button onchange="robot.backward()">Backward</button>
+  <button onchange="robot.right()">Right</button>
+  <button onchange="robot.left()">Left</button>
+  <input
+    type="range"
+    min="0"
+    max="1"
+    value="1"
+    onchange="robot.changeSpeed(this.value)"
+  />
+</body>
+````
+
+```
 
 ## We're Done
 
 Congrats on creating your first custom Espruino Tools app, code for this project can be found [here](here)
+```

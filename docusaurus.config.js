@@ -78,10 +78,6 @@ const config = {
                 to: '/docs/intro',
               },
               {
-                label: 'Getting Started',
-                to: '/docs/getting-started/',
-              },
-              {
                 label: 'Device Controller',
                 to: '/docs/device-controller/getting-started',
               },
