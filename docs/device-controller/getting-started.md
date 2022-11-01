@@ -20,18 +20,24 @@ From here you can navigate to the desired directory and run `npm start` to start
 
 ### Additional optional NPX tags
 
+#### `--template`
+
 You can follow your npx command with `--template {template}` to get started with a familar template, examples of the templates supported are:
 
 - typescript
 - react
 - vue
 
+#### `--clean-install`
+
+Another available tag is `--clean-install`, we can use this to get an espruino tools project set up without any of the splash page or styling provided with the default install
+
 ### Example of usage
 
-below is an example of creating a typescript espruino app called my-first-espruino-app
+below is an example of creating a typescript espruino app with a clean install called my-first-espruino-app
 
 ```
-npx create-espruino-app my-first-espruino-app --template typescript
+npx create-espruino-app my-first-espruino-app --template typescript --clean-install
 ```
 
 ## NPM Package
