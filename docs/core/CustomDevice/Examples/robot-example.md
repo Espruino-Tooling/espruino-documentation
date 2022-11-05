@@ -40,7 +40,7 @@ within our src folder lets start by creating a new file `robot.js`. This will ac
 lets start coding, in your `robot.js` file lets declare a new class and give it our required methods.
 
 ```javascript
-import DeviceController from "@espruino-tools/device-controller";
+import DeviceController from "@espruino-tools/core";
 
 export class Robot extends DeviceController {
   constructor() {
@@ -65,7 +65,7 @@ export class Robot extends DeviceController {
 next we should implement the speed variable.
 
 ```javascript
-import DeviceController from "@espruino-tools/device-controller";
+import DeviceController from "@espruino-tools/core";
 
 export class Robot extends DeviceController {
   constructor() {

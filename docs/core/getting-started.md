@@ -45,7 +45,7 @@ npx create-espruino-app my-first-espruino-app --template typescript --clean-inst
 If the NPX tool isnt suitable for your use case you can always just import the package with npm shown below.
 
 ```
-npm install @espruino-tools/device-controller
+npm install @espruino-tools/core
 ```
 
 ### Importing the package
@@ -55,5 +55,5 @@ the npm package by default comes with 4 possible imports `DeviceController`, `Pu
 an example below imports the base DeviceController class, which can be used to build your own custom classes
 
 ```javascript
-import { DeviceController } from "@espruino-tools/device-controller";
+import { DeviceController } from "@espruino-tools/core";
 ```

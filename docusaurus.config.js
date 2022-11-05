@@ -1,43 +1,43 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Espruino Tools',
-  tagline: 'A Collection of tools to improve the development experience using espruino devices.',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
-  onBrokenLinks: 'log',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  title: "Espruino Tools",
+  tagline:
+    "A Collection of tools to improve the development experience using espruino devices.",
+  url: "https://your-docusaurus-test-site.com",
+  baseUrl: "/",
+  onBrokenLinks: "log",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.ico",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'espruino-tools', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: "espruino-tools", // Usually your GitHub org/user name.
+  projectName: "docusaurus", // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-    
+          sidebarPath: require.resolve("./sidebars.js"),
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       }),
     ],
@@ -47,69 +47,77 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Espruino Tools',
+        title: "Espruino Tools",
         logo: {
-          alt: 'Espruino Tools Logo',
-          src: 'img/espruino.png',
+          alt: "Espruino Tools Logo",
+          src: "img/espruino.png",
         },
         items: [
           {
-            label: 'Device Controller',
-            to: '/docs/category/device-controller',
+            label: "Core",
+            to: "/docs/category/core",
           },
           {
-            label: 'UART',
-            to: '/docs/category/uart',
+            label: "UART",
+            to: "/docs/category/uart",
           },
           {
-            label: 'Create Espruino App',
-            to: '/docs/category/create-espruino-app',
+            label: "Create Espruino App",
+            to: "/docs/category/create-espruino-app",
+          },
+          {
+            label: "Peer",
+            to: "/docs/peer/getting-started",
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Docs',
+            title: "Docs",
             items: [
               {
-                label: 'Getting Introduction',
-                to: '/docs/intro',
+                label: "Getting Introduction",
+                to: "/docs/intro",
               },
               {
-                label: 'Device Controller',
-                to: '/docs/device-controller/getting-started',
+                label: "Core",
+                to: "/docs/core/getting-started",
               },
               {
-                label: 'UART',
-                to: '/docs/uart/getting-started',
+                label: "UART",
+                to: "/docs/uart/getting-started",
               },
               {
-                label: 'Create Espruino App',
-                to: '/docs/create-espruino-app/getting-started',
+                label: "Create Espruino App",
+                to: "/docs/create-espruino-app/getting-started",
+              },
+              {
+                label: "Peer",
+                to: "/docs/peer/getting-started",
               },
             ],
           },
           {
-            title: 'Packages',
+            title: "Packages",
             items: [
               {
-                label: 'NPM - Device Controller',
-                href: 'https://www.npmjs.com/package/@espruino-tools/device-controller',
+                label: "NPM - Core",
+                href: "https://www.npmjs.com/package/@espruino-tools/core",
               },
               {
-                label: 'NPM - UART',
-                href: 'https://www.npmjs.com/package/@espruino-tools/uart',
+                label: "NPM - UART",
+                href: "https://www.npmjs.com/package/@espruino-tools/uart",
               },
             ],
           },
           {
-            title: 'Repositories',
+            title: "Repositories",
             items: [
               {
-                label: 'GitHub Organisation',
-                href: 'https://github.com/espruino-tools',
+                label: "GitHub Organisation",
+                href: "https://github.com/espruino-tools",
               },
             ],
           },

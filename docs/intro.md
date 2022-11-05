@@ -8,7 +8,7 @@ Espruino Tools are a selection of tools and packages to allow developers to get 
 
 To get started visit the `NPX Tool` Section [here](./category/create-espruino-app)
 
-Or visit the documentation for the `DeviceController` package [here](./category/device-controller)
+Or visit the documentation for the `Core` package [here](./category/core)
 
 ## Visit our Demos site
 

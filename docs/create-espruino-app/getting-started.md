@@ -25,6 +25,8 @@ You can follow your npx command with `--template {template}` to get started with
 
 Another available tag is `--clean-install`, we can use this to get an espruino tools project set up without any of the splash page or styling provided with the default install
 
+Finally you can use the `--peer` tag to start a project using the `@espruino-tools/peer` package, this will set up both pages needed for this to function.
+
 ### Example of usage
 
 below is an example of creating a typescript espruino app with a clean install called my-first-espruino-app
@@ -35,4 +37,4 @@ npx create-espruino-app my-first-espruino-app --template typescript --clean-inst
 
 #### You're Done :)
 
-you can now visit the `DeviceController` docs [here](../category/device-controller) to learn more about what and how you can work with the espruino devices.
+you can now visit the `Core` docs [here](../category/core) to learn more about what and how you can work with the espruino devices.

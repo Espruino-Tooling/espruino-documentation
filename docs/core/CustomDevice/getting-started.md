@@ -9,13 +9,12 @@ To create a custom device follow the instructions below.
 1. Create a new device class which extends the DeviceController class.
 
 ```javascript
+import { DeviceController } from "@espruino-tools/core";
 
-import { DeviceController } from '@espruino-tools/device-controller
-
-export class MyNewDevice extends DeviceController{
-    constructor(){
-        super()
-    }
+export class MyNewDevice extends DeviceController {
+  constructor() {
+    super();
+  }
 }
 ```
 
