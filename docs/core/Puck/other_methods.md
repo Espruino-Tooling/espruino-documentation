@@ -2,6 +2,20 @@
 
 Here are some of the other methods available on the puck device.
 
+## getLightVal
+
+`getLightVal(): Promise<number>`
+
+This method will return the current light value of the environment near the puck device.
+
+```javascript
+let device = new DeviceController();
+
+device.getLightVal().then((val) => {
+  console.log(val);
+});
+```
+
 ## getTemperature
 
 `getTemperature(): Promise<number>`
