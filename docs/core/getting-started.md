@@ -57,3 +57,25 @@ an example below imports the base DeviceController class, which can be used to b
 ```javascript
 import { DeviceController } from "@espruino-tools/core";
 ```
+
+## UNPKG (`<script>` tags)
+
+To get started in a plain html page, you can use the unpkg link
+
+just import as shown below
+
+```html
+<script src="https://unpkg.com/@espruino-tools/core@latest/min/main.min.js"></script>
+```
+
+From here you are ready to use the package like so
+
+```html
+<script>
+  let puck = new ESPT_core.Puck();
+
+  puck.connect(function () {
+    console.log("connected");
+  });
+</script>
+```

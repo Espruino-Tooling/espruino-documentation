@@ -21,3 +21,23 @@ from here this can be imported like so
 ```javascript
 import { uart } from "@espruino-tools/uart";
 ```
+
+## UNPKG (`<script>` tags)
+
+To get started in a plain html page, you can use the unpkg link
+
+just import as shown below
+
+```html
+<script src="https://unpkg.com/@espruino-tools/uart@latest/min/main.min.js"></script>
+```
+
+From here you are ready to use the package like so
+
+```html
+<script>
+  let UART = ESPT_uart;
+
+  UART.write("LED1.set();\n");
+</script>
+```

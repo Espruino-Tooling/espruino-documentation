@@ -27,3 +27,25 @@ npm i @espruino-tools/peer
 ```javascript
 import { Host, Connector } from "@espruino-tools/peer";
 ```
+
+## UNPKG (`<script>` tags)
+
+To get started in a plain html page, you can use the unpkg link
+
+just import as shown below
+
+```html
+<script src="https://unpkg.com/@espruino-tools/peer@latest/min/main.min.js"></script>
+```
+
+From here you are ready to use the package like so
+
+```html
+<script>
+  let host = new ESPT_peer.Host();
+
+  host.getData(function (data) {
+    console.log(data);
+  });
+</script>
+```
