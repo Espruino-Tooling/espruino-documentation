@@ -22,7 +22,7 @@ from here this can be imported like so
 import { uart } from "@espruino-tools/uart";
 ```
 
-## UNPKG (`<script>` tags)
+### UNPKG (`<script>` tags)
 
 To get started in a plain html page, you can use the unpkg link
 
