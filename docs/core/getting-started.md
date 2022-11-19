@@ -58,7 +58,7 @@ an example below imports the base DeviceController class, which can be used to b
 import { DeviceController } from "@espruino-tools/core";
 ```
 
-### UNPKG (`<script>` tags)
+## CDN
 
 To get started in a plain html page, you can use the unpkg link
 

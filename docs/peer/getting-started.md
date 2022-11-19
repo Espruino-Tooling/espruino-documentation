@@ -28,7 +28,7 @@ npm i @espruino-tools/peer
 import { Host, Connector } from "@espruino-tools/peer";
 ```
 
-### UNPKG (`<script>` tags)
+## CDN
 
 To get started in a plain html page, you can use the unpkg link
 
