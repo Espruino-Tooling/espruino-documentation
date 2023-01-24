@@ -53,12 +53,10 @@ additional_initialisers?: string[];
 
 This code will transform an AST to another AST
 
-``javascript
+```javascript
 
 let your_ast = ...
 
 let transformed_ast = transformer(your_ast)
-
-```
 
 ```
