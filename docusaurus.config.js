@@ -69,6 +69,14 @@ const config = {
             label: "Peer",
             to: "/docs/peer/getting-started",
           },
+          {
+            label: "Transpiler",
+            to: "/docs/transpiler/getting-started",
+          },
+          {
+            label: "Online Environment",
+            to: "/docs/onlineIDE/explanation",
+          },
         ],
       },
       footer: {
@@ -97,6 +105,14 @@ const config = {
                 label: "Peer",
                 to: "/docs/peer/getting-started",
               },
+              {
+                label: "Transpiler",
+                to: "/docs/transpiler/getting-started",
+              },
+              {
+                label: "Online Environment",
+                to: "/docs/onlineIDE/explanation",
+              },
             ],
           },
           {
@@ -109,6 +125,14 @@ const config = {
               {
                 label: "NPM - UART",
                 href: "https://www.npmjs.com/package/@espruino-tools/uart",
+              },
+              {
+                label: "NPM - Transpiler",
+                href: "https://www.npmjs.com/package/@espruino-tools/transpiler",
+              },
+              {
+                label: "NPM - Peer",
+                href: "https://www.npmjs.com/package/@espruino-tools/peer",
               },
             ],
           },
